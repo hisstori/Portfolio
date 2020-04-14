@@ -12,6 +12,8 @@
         <p v-show='isVisible'>Secret Message!</p>
 
         <button @click="isVisible=!isVisible">Click Here</button>
+        <button @click="counter++">Click to increase.</button>
+        <p>Clicks: {{ counter }}</p>
         <ul>
             <li v-for='todo in todo'> {{ todo }}</li>
         </ul>
@@ -28,6 +30,7 @@
             name: 'Ryan',
             todo: ['Apply for Jobs', 'Start Packing', 'Look at getting a car', 'Open account for Jayce'],
             isVisible: false,
+            counter: 0,
         }
     })
 
