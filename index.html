@@ -7,7 +7,14 @@
 </head>
 <body>
     <div id='app'>
-        <p>Hello, world!</p>
+
+        <p>Hello, {{ name }}!</p>
+        
+        <ul>
+            <li></li>
+        </ul>
+        <p> {{ ['Eat', 'Play', 'Sleep'].join(', ')}} </p>
+
     </div>
     
 <script src='vue.js'></script>
@@ -15,7 +22,10 @@
     // Vue Instance
     let vm = new Vue({
         // Where is the vue application on the page?
-        el: '#app'
+        el: '#app',
+        data: {
+            name: 'Ryan'
+        }
     })
 
 </script>
