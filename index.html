@@ -11,6 +11,7 @@
         <p>Hello, {{ name }}!</p>
         <p v-show='isVisible'>Secret Message!</p>
 
+        <button @click="isVisible=!isVisible">Click Here</button>
         <ul>
             <li v-for='todo in todo'> {{ todo }}</li>
         </ul>
