@@ -9,11 +9,11 @@
     <div id='app'>
 
         <p>Hello, {{ name }}!</p>
-        
+        <p v-show='isVisible'>Secret Message!</p>
+
         <ul>
-            <li></li>
+            <li v-for='todo in todo'> {{ todo }}</li>
         </ul>
-        <p> {{ ['Eat', 'Play', 'Sleep'].join(', ')}} </p>
 
     </div>
     
@@ -24,7 +24,9 @@
         // Where is the vue application on the page?
         el: '#app',
         data: {
-            name: 'Ryan'
+            name: 'Ryan',
+            todo: ['Apply for Jobs', 'Start Packing', 'Look at getting a car', 'Open account for Jayce'],
+            isVisible: false,
         }
     })
 
